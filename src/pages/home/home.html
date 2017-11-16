@@ -1,14 +1,36 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      The Dish Logger
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <img *ngIf="image" [src]="image" alt=" ">
 </ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-6>
+        <button ion-button icon-only block (click)="pictureFromCamera()">
+          
+          <ion-icon name="camera">
+           </ion-icon>
+
+        </button>
+      </ion-col>
+      <ion-col col-6>
+          <button ion-button icon-only block (click)="picturefromGallery()">
+              
+              <ion-icon name="images">
+               </ion-icon>
+    
+            </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-footer>
